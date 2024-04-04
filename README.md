@@ -1,1 +1,1 @@
-# 42-pisicine
+# 42-pisicine C Exercises
