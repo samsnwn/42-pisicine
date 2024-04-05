@@ -102,6 +102,19 @@ void	print_printable_chars(unsigned char *ptr, int remaining_chars)
 	}
 }
 
+int	ft_strlen(char *str)
+{
+	int	count;
+
+	count = 0;
+	while (*str)
+	{
+		str++;
+		count++;
+	}
+	return (count);
+}
+
 // Function to print memory content
 void	*ft_print_memory(void *addr, unsigned int size)
 {
@@ -131,11 +144,12 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	return (addr);
 }
 
-// int	main(void)
-// {
-// 	char	*str;
+int	main(void)
+{
+	char	*str;
 
-// 	str = "Hello, world!\nThis is a test.";
-// 	ft_print_memory(str, 24);
-// 	return (0);
-// }
+	str = "Bonjour les amin ches...c est fo u.tout.ce qu on peut faire avec...print_memory...lol.lol. .";
+	// ft_print_memory(str, ft_strlen(str));
+	ft_print_memory(str, 30);
+	return (0);
+}
