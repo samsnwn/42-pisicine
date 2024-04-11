@@ -13,25 +13,21 @@ void	ft_cat(char **filenames, int size)
 		fd = open(filename, O_RDONLY | O_CREAT, 0600);
 		if (fd == -1)
 		{
-			write(2, "Cannot read file.\n", 18);
-			write(2, strerror(errno), ft_strlen(strerror(errno)));
-			write(2, "\n", 1);
+			write_error("Cannot read file.\n");
 			return ;
 		}
 		while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
 		{
 			if (write(1, buffer, bytes_read) != bytes_read)
 			{
-				write(2, "Error writing to standard output\n", 33);
+				write_error("Error writing to standard output\n");
 				close(fd);
 				return ;
 			}
 		}
 		if (bytes_read == -1)
 		{
-			write(2, "Error reading file: ", 20);
-			write(2, strerror(errno), ft_strlen(strerror(errno)));
-			write(2, "\n", 1);
+			write_error("Error reading file: ");
 			close(fd);
 			return ;
 		}

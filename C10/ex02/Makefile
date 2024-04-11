@@ -1,12 +1,16 @@
+# -*- MakeFile -*-
+
 SRC_DIR = ./srcs/
 HEAD_DIR = ./includes/
 SRCS = ${SRC_DIR}main.c\
-				${SRC_DIR}ft_display_file.c\
+		${SRC_DIR}ft_tail.c\
+		${SRC_DIR}ft_strlen.c\
+		${SRC_DIR}ft_strcmp.c\
 
 
-HEAD = ${HEAD_DIR}ft_display_file.h
+HEAD = ${HEAD_DIR}ft_tail.h
 OBJS = ${SRCS:.c=.o}
-NAME = ft_display_file
+NAME = ft_tail
 CC = cc
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra

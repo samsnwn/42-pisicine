@@ -6,7 +6,6 @@
 # include <unistd.h>
 
 # define BUFFER_SIZE 4096
-void	ft_putstr(char *str);
 void	ft_display_file(char *filename);
 
 #endif
