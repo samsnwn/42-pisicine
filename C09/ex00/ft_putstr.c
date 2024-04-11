@@ -2,9 +2,9 @@
 
 void	ft_putstr(char *str)
 {
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-	}
+	char *p_s;
+
+	p_s = str;
+	while (*p_s)
+		write(1, p_s++, 1);
 }

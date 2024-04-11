@@ -1,10 +1,9 @@
-int	ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-	int count = 0;
-	while (*str)
-	{
-		str++;
-		count++;
-	}
-	return (count);
+	char *p;
+
+	p = str;
+	while (*p)
+		p++;
+	return ((unsigned int)(p - str));
 }

@@ -1,4 +1,4 @@
-#include "ft.h"
+#include "ft_display_file.h"
 
 void	ft_putstr(char *str)
 {
