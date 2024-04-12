@@ -6,6 +6,8 @@ SRCS = ${SRC_DIR}main.c\
 		${SRC_DIR}ft_tail.c\
 		${SRC_DIR}ft_strlen.c\
 		${SRC_DIR}ft_strcmp.c\
+		${SRC_DIR}ft_atoi.c\
+		${SRC_DIR}write_error.c\
 
 
 HEAD = ${HEAD_DIR}ft_tail.h

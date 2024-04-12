@@ -12,9 +12,17 @@ void	ft_display_file(char *filename)
 		write(2, "Cannot read file.\n", 18);
 		return ;
 	}
-	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
+	// bytes_read = read(fd, buffer, BUFFER_SIZE - 1);
+	// while (bytes_read > 0)
+	// {
+	// 	write(1, buffer, bytes_read);
+	// 	buffer[bytes_read] = '\0';
+	// 	bytes_read = read(fd, buffer, BUFFER_SIZE - 1);
+	// }
+	while ((bytes_read = read(fd, buffer, BUFFER_SIZE - 1)) > 0)
 	{
 		write(1, buffer, bytes_read);
 	}
+	buffer[bytes_read] = '\0';
 	close(fd);
 }

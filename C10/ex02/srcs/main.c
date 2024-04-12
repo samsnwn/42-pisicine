@@ -7,5 +7,6 @@ int	main(int argc, char *argv[])
 		write(2, "Usage: ft_tail -c <number> <file>\n", 34);
 		return (1);
 	}
+	ft_tail(argv);
 	return (0);
 }

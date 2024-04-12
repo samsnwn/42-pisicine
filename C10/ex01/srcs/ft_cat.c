@@ -16,7 +16,7 @@ void	ft_cat(char **filenames, int size)
 			write_error("Cannot read file.\n");
 			return ;
 		}
-		while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
+		while ((bytes_read = read(fd, buffer, BUFFER_SIZE - 1)) > 0)
 		{
 			if (write(1, buffer, bytes_read) != bytes_read)
 			{
